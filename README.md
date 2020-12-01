@@ -12,7 +12,14 @@ Ao longo do semestre o aluno faz 3 tipos de atividade:
 
 Abaixo temos os campos dessa planilha:
 
-TODO Adicionar tabela
+| id  	| name          	| subject 	| type   	| value 	|
+|-----	|---------------	|---------	|--------	|-------	|
+| 001 	| User Name 001 	| 01-Java 	| Task   	| 10    	|
+| 001 	| User Name 001 	| 01-Java 	| Test 1 	| 10    	|
+| 001 	| User Name 001 	| 01-Java 	| Test 2 	| 8     	|
+| 002 	| User Name 002 	| 01-Java 	| Task   	| 5     	|
+| 002 	| User Name 002 	| 01-Java 	| Test 1 	| 4     	|
+| 002 	| User Name 002 	| 01-Java 	| Test 2 	| 5     	|
 
 
 Todo fim de semestre uma pessoa fica responsável por filtrar e calcular as notas dos alunos e consolidar em outra planilha
