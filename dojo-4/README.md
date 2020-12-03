@@ -2,7 +2,8 @@
 
 ### Problema
 
-Na escola CodeMN todo o final de semestre temos que gerar o boletim com as notas dos alunos. Atualmente esse processo é executado de forma manual utilizando apenas uma planilha para fazer o calculo das notas junto com formatação condicional para saber o status do aluno em função da nota.
+Na escola CodeMN todo o final de semestre temos que gerar o boletim com as notas dos alunos. Atualmente esse processo é 
+executado de forma manual utilizando apenas uma planilha para fazer o cálculo das notas.
 
 Ao longo do semestre o aluno faz 3 atividades:
 
@@ -60,7 +61,7 @@ Este sistema é responsável por consolidar as notas dos alunos abaixo segue uma
 ### Emissão de boletim
 
 Neste desenvolvimento não vamos integrar o sistema de boletim com a impressora, então devemos criar um sistema para gerar os boletins para serem impressos e enviados para os pais dos alunos.
-1. Recuperar o arquivo.
+1. Recuperar o arquivo **final_media.json**.
 2. Serializar os dados.
 3. Criar um arquivo para cada aluno com o nome: **ano-id-nome_do_aluno.txt**
 O arquivo deverá conter a seguinte formatação:
@@ -79,3 +80,13 @@ JOÃO DA SILVA - APPROVADO - 9.5
 02-KOTLIN - 10.0
 03-PYTHON -  9.0
 ```
+
+## Requisitos
+- Não realizar operações de I/O na thread principal
+- Não realizar operações de cálculos na thread principal
+- Escrever teste
+
+## Conhecimentos abordados nesse desafio
+- [Leitura e escrita de arquivos com Kotlin](https://khan.github.io/kotlin-for-python-developers/#file-io)
+- [Composição de suspend functions](https://kotlinlang.org/docs/reference/coroutines/composing-suspending-functions.html)
+- [Coroutine Context e Dispatchers](https://kotlinlang.org/docs/reference/coroutines/coroutine-context-and-dispatchers.html)
