@@ -1,3 +1,4 @@
+
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -27,6 +28,12 @@ data class StudentReportCard(
         val status: StudentStatus,
         @SerialName("final_value")
         val final: Float
+)
+
+@Serializable
+data class ReportTasks(
+        @SerialName("tasks")
+        val tasks: List<StudentTask>
 )
 
 @Serializable
