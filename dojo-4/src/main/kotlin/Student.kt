@@ -1,18 +1,39 @@
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class StudentTask(
-    val studentId: String,
-    val studentName: String,
-    val subject: String,
-    val type: String,
-    val value: Float
+        @SerialName("id")
+        val studentId: String,
+        @SerialName("name")
+        val studentName: String,
+        @SerialName("subject")
+        val subject: String,
+        @SerialName("type")
+        val type: String,
+        @SerialName("value")
+        val value: Float
 )
 
+@Serializable
 data class StudentReportCard(
-    val id: String,
-    val name: String,
-    val subjects: Map<String, Float>,
-    val status: StudentStatus,
+        @SerialName("id")
+        val id: String,
+        @SerialName("name")
+        val name: String,
+        @SerialName("subjects")
+        val subjects: Map<SubjectName, SubjectResult>,
+        @SerialName("status")
+        val status: StudentStatus,
+        @SerialName("final_value")
+        val final: Float
 )
 
+@Serializable
 enum class StudentStatus {
-    APPROVED, REPROVED
+    APPROVED,
+    REPROVED
 }
+
+typealias SubjectName = String
+typealias SubjectResult = Float

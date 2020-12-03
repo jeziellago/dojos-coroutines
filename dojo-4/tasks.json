@@ -1,0 +1,571 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "name": "Jonathan Silver",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Task",
+      "value": 4.0
+    },
+    {
+      "id": "1",
+      "name": "Jonathan Silver",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-1",
+      "value": 9.5
+    },
+    {
+      "id": "1",
+      "name": "Jonathan Silver",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-2",
+      "value": 7.0
+    },
+    {
+      "id": "1",
+      "name": "Jonathan Silver",
+      "subject": "02-Banco-de-dados",
+      "type": "Task",
+      "value": 6.5
+    },
+    {
+      "id": "1",
+      "name": "Jonathan Silver",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-1",
+      "value": 8.5
+    },
+    {
+      "id": "1",
+      "name": "Jonathan Silver",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-2",
+      "value": 7.5
+    },
+    {
+      "id": "1",
+      "name": "Jonathan Silver",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Task",
+      "value": 6.0
+    },
+    {
+      "id": "1",
+      "name": "Jonathan Silver",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-1",
+      "value": 8.0
+    },
+    {
+      "id": "1",
+      "name": "Jonathan Silver",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-2",
+      "value": 5.0
+    },
+    {
+      "id": "2",
+      "name": "John Walk",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Task",
+      "value": 6.0
+    },
+    {
+      "id": "2",
+      "name": "John Walk",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-1",
+      "value": 8.5
+    },
+    {
+      "id": "2",
+      "name": "John Walk",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-2",
+      "value": 7.5
+    },
+    {
+      "id": "2",
+      "name": "John Walk",
+      "subject": "02-Banco-de-dados",
+      "type": "Task",
+      "value": 8.5
+    },
+    {
+      "id": "2",
+      "name": "John Walk",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-1",
+      "value": 5.0
+    },
+    {
+      "id": "2",
+      "name": "John Walk",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-2",
+      "value": 8.5
+    },
+    {
+      "id": "2",
+      "name": "John Walk",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Task",
+      "value": 7.5
+    },
+    {
+      "id": "2",
+      "name": "John Walk",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-1",
+      "value": 8.0
+    },
+    {
+      "id": "2",
+      "name": "John Walk",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-2",
+      "value": 8.0
+    },
+    {
+      "id": "3",
+      "name": "Mary Jesus",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Task",
+      "value": 6.0
+    },
+    {
+      "id": "3",
+      "name": "Mary Jesus",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-1",
+      "value": 8.0
+    },
+    {
+      "id": "3",
+      "name": "Mary Jesus",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-2",
+      "value": 10.0
+    },
+    {
+      "id": "3",
+      "name": "Mary Jesus",
+      "subject": "02-Banco-de-dados",
+      "type": "Task",
+      "value": 9.0
+    },
+    {
+      "id": "3",
+      "name": "Mary Jesus",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-1",
+      "value": 8.0
+    },
+    {
+      "id": "3",
+      "name": "Mary Jesus",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-2",
+      "value": 9.5
+    },
+    {
+      "id": "3",
+      "name": "Mary Jesus",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Task",
+      "value": 4.0
+    },
+    {
+      "id": "3",
+      "name": "Mary Jesus",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-1",
+      "value": 4.0
+    },
+    {
+      "id": "3",
+      "name": "Mary Jesus",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-2",
+      "value": 8.0
+    },
+    {
+      "id": "4",
+      "name": "Joseph Self",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Task",
+      "value": 4.0
+    },
+    {
+      "id": "4",
+      "name": "Joseph Self",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-1",
+      "value": 6.5
+    },
+    {
+      "id": "4",
+      "name": "Joseph Self",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-2",
+      "value": 6.0
+    },
+    {
+      "id": "4",
+      "name": "Joseph Self",
+      "subject": "02-Banco-de-dados",
+      "type": "Task",
+      "value": 4.5
+    },
+    {
+      "id": "4",
+      "name": "Joseph Self",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-1",
+      "value": 6.0
+    },
+    {
+      "id": "4",
+      "name": "Joseph Self",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-2",
+      "value": 8.5
+    },
+    {
+      "id": "4",
+      "name": "Joseph Self",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Task",
+      "value": 10.0
+    },
+    {
+      "id": "4",
+      "name": "Joseph Self",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-1",
+      "value": 8.5
+    },
+    {
+      "id": "4",
+      "name": "Joseph Self",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-2",
+      "value": 5.5
+    },
+    {
+      "id": "5",
+      "name": "Phil James",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Task",
+      "value": 10.0
+    },
+    {
+      "id": "5",
+      "name": "Phil James",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-1",
+      "value": 5.0
+    },
+    {
+      "id": "5",
+      "name": "Phil James",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-2",
+      "value": 9.0
+    },
+    {
+      "id": "5",
+      "name": "Phil James",
+      "subject": "02-Banco-de-dados",
+      "type": "Task",
+      "value": 9.5
+    },
+    {
+      "id": "5",
+      "name": "Phil James",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-1",
+      "value": 5.0
+    },
+    {
+      "id": "5",
+      "name": "Phil James",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-2",
+      "value": 8.0
+    },
+    {
+      "id": "5",
+      "name": "Phil James",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Task",
+      "value": 5.5
+    },
+    {
+      "id": "5",
+      "name": "Phil James",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-1",
+      "value": 8.5
+    },
+    {
+      "id": "5",
+      "name": "Phil James",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-2",
+      "value": 4.5
+    },
+    {
+      "id": "6",
+      "name": "Jake Wharton",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Task",
+      "value": 9.0
+    },
+    {
+      "id": "6",
+      "name": "Jake Wharton",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-1",
+      "value": 6.0
+    },
+    {
+      "id": "6",
+      "name": "Jake Wharton",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-2",
+      "value": 4.0
+    },
+    {
+      "id": "6",
+      "name": "Jake Wharton",
+      "subject": "02-Banco-de-dados",
+      "type": "Task",
+      "value": 5.5
+    },
+    {
+      "id": "6",
+      "name": "Jake Wharton",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-1",
+      "value": 8.5
+    },
+    {
+      "id": "6",
+      "name": "Jake Wharton",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-2",
+      "value": 9.0
+    },
+    {
+      "id": "6",
+      "name": "Jake Wharton",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Task",
+      "value": 6.0
+    },
+    {
+      "id": "6",
+      "name": "Jake Wharton",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-1",
+      "value": 7.0
+    },
+    {
+      "id": "6",
+      "name": "Jake Wharton",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-2",
+      "value": 5.0
+    },
+    {
+      "id": "7",
+      "name": "Guthrie Govan",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Task",
+      "value": 4.5
+    },
+    {
+      "id": "7",
+      "name": "Guthrie Govan",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-1",
+      "value": 4.0
+    },
+    {
+      "id": "7",
+      "name": "Guthrie Govan",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-2",
+      "value": 10.0
+    },
+    {
+      "id": "7",
+      "name": "Guthrie Govan",
+      "subject": "02-Banco-de-dados",
+      "type": "Task",
+      "value": 4.0
+    },
+    {
+      "id": "7",
+      "name": "Guthrie Govan",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-1",
+      "value": 7.0
+    },
+    {
+      "id": "7",
+      "name": "Guthrie Govan",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-2",
+      "value": 4.5
+    },
+    {
+      "id": "7",
+      "name": "Guthrie Govan",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Task",
+      "value": 4.5
+    },
+    {
+      "id": "7",
+      "name": "Guthrie Govan",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-1",
+      "value": 7.0
+    },
+    {
+      "id": "7",
+      "name": "Guthrie Govan",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-2",
+      "value": 6.5
+    },
+    {
+      "id": "8",
+      "name": "Stevie Lon",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Task",
+      "value": 6.5
+    },
+    {
+      "id": "8",
+      "name": "Stevie Lon",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-1",
+      "value": 5.0
+    },
+    {
+      "id": "8",
+      "name": "Stevie Lon",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-2",
+      "value": 8.0
+    },
+    {
+      "id": "8",
+      "name": "Stevie Lon",
+      "subject": "02-Banco-de-dados",
+      "type": "Task",
+      "value": 4.5
+    },
+    {
+      "id": "8",
+      "name": "Stevie Lon",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-1",
+      "value": 5.5
+    },
+    {
+      "id": "8",
+      "name": "Stevie Lon",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-2",
+      "value": 5.5
+    },
+    {
+      "id": "8",
+      "name": "Stevie Lon",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Task",
+      "value": 10.0
+    },
+    {
+      "id": "8",
+      "name": "Stevie Lon",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-1",
+      "value": 5.5
+    },
+    {
+      "id": "8",
+      "name": "Stevie Lon",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-2",
+      "value": 9.5
+    },
+    {
+      "id": "9",
+      "name": "Joe Sat",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Task",
+      "value": 6.5
+    },
+    {
+      "id": "9",
+      "name": "Joe Sat",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-1",
+      "value": 7.5
+    },
+    {
+      "id": "9",
+      "name": "Joe Sat",
+      "subject": "01-Algoritmos-Estr-Dados",
+      "type": "Test-2",
+      "value": 6.5
+    },
+    {
+      "id": "9",
+      "name": "Joe Sat",
+      "subject": "02-Banco-de-dados",
+      "type": "Task",
+      "value": 5.0
+    },
+    {
+      "id": "9",
+      "name": "Joe Sat",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-1",
+      "value": 4.5
+    },
+    {
+      "id": "9",
+      "name": "Joe Sat",
+      "subject": "02-Banco-de-dados",
+      "type": "Test-2",
+      "value": 6.0
+    },
+    {
+      "id": "9",
+      "name": "Joe Sat",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Task",
+      "value": 6.5
+    },
+    {
+      "id": "9",
+      "name": "Joe Sat",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-1",
+      "value": 7.0
+    },
+    {
+      "id": "9",
+      "name": "Joe Sat",
+      "subject": "03-Linguagem-de-Prog",
+      "type": "Test-2",
+      "value": 5.0
+    }
+  ]
+}

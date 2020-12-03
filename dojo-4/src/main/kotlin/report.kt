@@ -1,7 +1,8 @@
 
 
 fun readStudentTasks(): List<StudentTask> {
-    TODO("Ler do arquivo 'student_tasks.json' e retorna uma lista de tasks")
+    // ~/Documents/Github/Dojos-coroutines/dojo-4/tasks.json
+    TODO("Ler do arquivo 'tasks.json' e retorna uma lista de tasks")
 }
 
 fun saveStudentReportCard(report: List<StudentReportCard>) {
