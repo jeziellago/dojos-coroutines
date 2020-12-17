@@ -18,3 +18,24 @@ data class Order(
     @SerialName("bad_child")
     val isBadChild: Boolean
 )
+
+@Serializable
+data class OrderList(
+    val orderList: List<Order>
+)
+
+
+@Serializable
+data class DeliveryList(
+    val continent: String,
+    val orderList: List<OrderForDelivery>
+)
+
+@Serializable
+data class OrderForDelivery(
+    val name: String,
+    val gender: String,
+    val address: String,
+    val email: String,
+    val gift: String
+)
