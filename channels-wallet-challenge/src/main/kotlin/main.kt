@@ -1,3 +1,8 @@
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.channels.ReceiveChannel
+import kotlinx.coroutines.channels.consumeEach
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.math.BigDecimal
 
@@ -6,9 +11,16 @@ sealed class WalletOperation {
     data class Deposit(val value: BigDecimal) : WalletOperation()
 }
 
-class Wallet(private var balance: BigDecimal = BigDecimal.ZERO) {
+class Wallet(
+    private var balance: BigDecimal = BigDecimal.ZERO,
+    private val channel: Channel<WalletChange> = Channel(10),
+) {
 
-    fun applyOperation(operation: WalletOperation) {
+    val receiveChannel: ReceiveChannel<WalletChange> = channel
+
+    suspend fun applyOperation(operation: WalletOperation) {
+        val walletChange = WalletChange(operation, balance, 0.toBigDecimal())
+
         when (operation) {
             is WalletOperation.Withdraw -> {
                 balance -= operation.value
@@ -17,32 +29,65 @@ class Wallet(private var balance: BigDecimal = BigDecimal.ZERO) {
                 balance += operation.value
             }
         }
+
+        channel.send(walletChange.copy(newBalance = balance))
     }
 
     fun currentBalance(): BigDecimal = balance
 }
 
-class WalletObserver {
+data class WalletChange(
+    val operation: WalletOperation,
+    val oldBalance: BigDecimal,
+    val newBalance: BigDecimal,
+)
 
-    fun onWalletChanged(
-        operation: WalletOperation,
-        oldBalance: BigDecimal,
-        newBalance: BigDecimal
-    ) {
-        println("[$operation]\n\tOld Balance: [R$ $oldBalance] | New Balance: [R$ $newBalance]")
+class WalletObserver {
+    fun onWalletChanged(walletChange: WalletChange) {
+        walletChange.run {
+            println("(${this@WalletObserver.hashCode()})\n\t[$operation]\n\tOld Balance: [R$ $oldBalance] | New Balance: [R$ $newBalance]")
+        }
     }
+}
+
+data class WalletPublisher(
+    private val coroutineScope: CoroutineScope,
+    private val channel: ReceiveChannel<WalletChange>
+) {
+    private val observers = mutableListOf<WalletObserver>()
+
+    init {
+        coroutineScope.launch {
+            channel.consumeEach { change ->
+                observers.forEach { observer ->
+                    observer.onWalletChanged(change)
+                }
+            }
+        }
+    }
+
+    fun subscribe(observer: WalletObserver) {
+        observers.add(observer)
+    }
+
 }
 
 fun main() = runBlocking<Unit> {
 
     val wallet = Wallet()
 
-    wallet.applyOperation(WalletOperation.Deposit(1999F.toBigDecimal()))
+    val publisher = WalletPublisher(this, wallet.receiveChannel)
 
-    WalletObserver().onWalletChanged(
-        WalletOperation.Deposit(1999F.toBigDecimal()),
-        0F.toBigDecimal(),
-        wallet.currentBalance()
-    )
+    val ob1 = WalletObserver()
+    val ob2 = WalletObserver()
 
+    publisher.subscribe(ob1)
+    publisher.subscribe(ob2)
+
+    launch {
+        wallet.applyOperation(WalletOperation.Deposit(5000.toBigDecimal()))
+        wallet.applyOperation(WalletOperation.Withdraw(1000F.toBigDecimal()))
+        wallet.applyOperation(WalletOperation.Deposit(2000.toBigDecimal()))
+        wallet.applyOperation(WalletOperation.Withdraw(1000.toBigDecimal()))
+    }
 }
