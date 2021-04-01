@@ -3,32 +3,35 @@ package dev.dojocoroutines.android
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import dev.dojocoroutines.android.domain.Fact
 import dev.dojocoroutines.android.domain.UseCase
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 
-class FactViewModel(private val getFactUseCase: UseCase<Fact>) : ViewModel() {
+class FactViewModel(
+    private val dispatcher: CoroutineDispatcher = Dispatchers.IO,
+    private val getFactUseCase: UseCase<Fact>
+) : ViewModel() {
 
     private val _state = MutableLiveData(FactState())
 
     val state: LiveData<FactState>
         get() = _state
 
-    private val disposable = CompositeDisposable()
-
     init {
         loadFact()
     }
 
     private fun loadFact() {
-        getFactUseCase.execute()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(::handleSuccess, ::handleError)
-            .apply { disposable.add(this) }
+        viewModelScope.launchSafe(::handleError) {
+            val fact: Fact = withContext(dispatcher) {
+                getFactUseCase.execute()
+            }
+            handleSuccess(fact)
+        }
     }
 
     private fun handleSuccess(fact: Fact) {
@@ -50,8 +53,4 @@ class FactViewModel(private val getFactUseCase: UseCase<Fact>) : ViewModel() {
         _state.value = onChange(checkNotNull(_state.value))
     }
 
-    override fun onCleared() {
-        disposable.clear()
-        super.onCleared()
-    }
 }

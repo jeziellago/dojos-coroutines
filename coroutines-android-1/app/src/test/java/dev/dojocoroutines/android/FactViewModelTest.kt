@@ -3,10 +3,10 @@ package dev.dojocoroutines.android
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import dev.dojocoroutines.android.domain.Fact
 import dev.dojocoroutines.android.domain.UseCase
-import io.reactivex.Single
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
+import org.mockito.kotlin.doAnswer
 import org.mockito.kotlin.doReturn
 import org.mockito.kotlin.mock
 
@@ -17,16 +17,17 @@ class FactViewModelTest {
     val itRule = InstantTaskExecutorRule()
 
     @get:Rule
-    val rxRule = RxTestRule()
+    val coroutineRule = CoroutineTestRule()
 
     @Test
     fun `when initialize should load fact state with description`() {
         val mockedUseCase = mock<UseCase<Fact>> {
-            on { execute() } doReturn Single.just(Fact("OK"))
+            onBlocking { execute() } doReturn Fact("OK")
         }
         val expectedState = FactState(description = "OK", error = null)
 
-        val viewModel = FactViewModel(mockedUseCase)
+        val viewModel =
+            FactViewModel(dispatcher = coroutineRule.testDispatcher, getFactUseCase = mockedUseCase)
 
         assertEquals(expectedState, viewModel.state.value)
     }
@@ -34,11 +35,14 @@ class FactViewModelTest {
     @Test
     fun `when initialize should load fact state with error`() {
         val mockedUseCase = mock<UseCase<Fact>> {
-            on { execute() } doReturn Single.error(Throwable("Deu ruim mano :("))
+            onBlocking { execute() } doAnswer {
+                throw Throwable("Deu ruim mano :(")
+            }
         }
         val expectedState = FactState(description = "", error = "Deu ruim mano :(")
 
-        val viewModel = FactViewModel(mockedUseCase)
+        val viewModel =
+            FactViewModel(dispatcher = coroutineRule.testDispatcher, getFactUseCase = mockedUseCase)
 
         assertEquals(expectedState, viewModel.state.value)
     }
